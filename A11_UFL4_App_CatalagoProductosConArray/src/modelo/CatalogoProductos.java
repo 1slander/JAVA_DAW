@@ -5,7 +5,7 @@ import javabean.Producto;
 public class CatalogoProductos {
 
 	private Producto [] lista ;
-	private static int cuantosVan = 0;
+	private int cuantosVan = 0;
 	
 	public CatalogoProductos() {
 		lista = new Producto[10];
@@ -72,5 +72,36 @@ public class CatalogoProductos {
 			return false;
 		lista[posicion]= producto;
 		return true;
+	}
+	
+	
+	public Producto[] findAll() {
+		if (size()==0)
+			return null;
+		Producto[] aux = new Producto[cuantosVan];
+		for (int i=0; i<cuantosVan; i++) {
+			aux[i]=lista[i];
+		}
+		
+		return aux;
+		
+	}
+	
+	public Producto[] buscarStockMayor(int cantidad) {
+		int posicion = 0;
+		Producto[] aux = new Producto[cuantosVan];
+		for(int i = 0; i< cuantosVan; i++ ) {
+			if(lista[i].getCantidadStock() > cantidad) {
+				aux[posicion]= lista[i];
+				posicion++;
+			}
+				
+		}
+		Producto[] listaDefinitiva= new Producto[posicion];
+		
+		for (int i =0 ; i<posicion; i++) {
+			listaDefinitiva[i]=aux[i];
+		}
+		return listaDefinitiva;
 	}
 }
