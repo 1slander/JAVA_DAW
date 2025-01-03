@@ -10,8 +10,19 @@ public class Automovil {
 		private int numPuertas;
 		private int numPlazas;
 		private int velocidadMax;
-		private String color;
+		private Color color;
 		private int velocidadActual;
+		
+		public enum Color{
+			BLANCO,
+			NEGRO,
+			ROJO,
+			NARANJA,
+			AMARILLO,
+			VERDE,
+			AZUL,
+			VIOLETA
+		}
 		
 		
 		
@@ -22,7 +33,7 @@ public class Automovil {
 
 
 		public Automovil(String marca, String anoFabricacion, int motor, String combustible,
-				String tipoDeVehiculo, int numPuertas, int numPlazas, int velocidadMax, String color,
+				String tipoDeVehiculo, int numPuertas, int numPlazas, int velocidadMax, Color color,
 				int velocidadActual) {
 			super();
 			this.marca = marca;
@@ -135,13 +146,13 @@ public class Automovil {
 
 
 
-		public String getColor() {
+		public Color getColor() {
 			return color;
 		}
 
 
 
-		public void setColor(String color) {
+		public void setColor(Color color) {
 			this.color = color;
 		}
 

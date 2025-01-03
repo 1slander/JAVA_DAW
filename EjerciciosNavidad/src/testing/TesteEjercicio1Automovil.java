@@ -6,7 +6,7 @@ public class TesteEjercicio1Automovil {
 
 	public static void main(String[] args) {
 		
-		Automovil car1 = new Automovil("Renault", "2023", 85, "gasolina", "ciudad",3, 4, 140, "Blanco", 100);
+		Automovil car1 = new Automovil("Renault", "2023", 85, "gasolina", "ciudad",3, 4, 140, Automovil.Color.NEGRO, 100);
 		
 		System.out.println(car1.toString());
 		
