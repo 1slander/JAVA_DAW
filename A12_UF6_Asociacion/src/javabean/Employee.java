@@ -103,7 +103,7 @@ public class Employee {
 	public String toString() {
 		return "Employee [employeeId=" + employeeId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
 				+ email + ", phoneNumber=" + phoneNumber + ", job=" + job + ", salary=" + salary + ", commissionPct="
-				+ commissionPct + ", myBoss=" + myBoss + ", deparment=" + deparment + "]";
+				+ commissionPct + ", myBoss=" + myBoss + "]";
 	}
 	@Override
 	public int hashCode() {

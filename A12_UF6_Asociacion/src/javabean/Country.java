@@ -60,7 +60,7 @@ public class Country {
 
 	@Override
 	public String toString() {
-		return "Country [countryId=" + countryId + ", countryName=" + countryName + ", region=" + region + "]";
+		return "Country [countryId=" + countryId + ", countryName=" + countryName + "]";
 	}
 	
 	

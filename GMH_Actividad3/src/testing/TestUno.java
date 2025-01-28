@@ -10,6 +10,12 @@ import javabean.Pais;
 import javabean.Pedido;
 import javabean.TarjetaBancaria;
 
+/**
+ * Clase donde realizaremos los siguientes test.
+ * @author Hector Gonzalez
+ * @version 1.0
+ */
+
 public class TestUno {
 
 	public static void main(String[] args) {

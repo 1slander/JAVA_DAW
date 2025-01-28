@@ -1,10 +1,22 @@
 package javabean;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Region {
 	private int regionId;
 	private String regionName;
+	
+	private ArrayList<Country> countries;
+	
+	
+	
+	public Region(int regionId, String regionName, ArrayList<Country> countries) {
+		super();
+		this.regionId = regionId;
+		this.regionName = regionName;
+		this.countries = countries;
+	}
 	
 	public Region(int regionId, String regionName) {
 		super();
@@ -28,6 +40,15 @@ public class Region {
 	}
 
 	
+	
+	public ArrayList<Country> getCountries() {
+		return countries;
+	}
+
+	public void setCountries(ArrayList<Country> countries) {
+		this.countries = countries;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(regionId);
@@ -42,13 +63,30 @@ public class Region {
 		return regionId == other.regionId;
 	}
 
-
-	
 	@Override
 	public String toString() {
-		return "Region [regionId=" + regionId + ", regionName=" + regionName + "]";
+		return "Region [regionId=" + regionId + ", regionName=" + regionName + ", countries=" + countries + "]";
+	}
+
+
+	
+	/*M METODOS */
+	
+	public boolean addCountry(Country country) {
+		if(countries == null)
+			countries = new ArrayList<Country>();
+		return countries.add(country);
+		
+		
 	}
 	
+	public boolean removeCountry(Country country) {
+		if(countries == null)
+			countries = new ArrayList<Country>();
+		return countries.remove(country);
+		
+		
+	}
 	
 	
 }

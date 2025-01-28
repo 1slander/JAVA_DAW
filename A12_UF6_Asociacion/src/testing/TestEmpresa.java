@@ -55,6 +55,9 @@ public class TestEmpresa {
 		else
 			System.out.println("Este empleado no tiene jefe");
 		
+		System.out.println(job1);
+		System.out.println(loc1500); 
+		System.out.println(empleado116);
 	}
 
 }
