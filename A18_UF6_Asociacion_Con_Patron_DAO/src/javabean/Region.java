@@ -1,5 +1,10 @@
 package javabean;
 
+import java.util.ArrayList;
+
+
+import java.util.Objects;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -8,12 +13,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@EqualsAndHashCode(of="nombre")
+@EqualsAndHashCode(of="regionId")
 
-public class Contacto {
+public class Region {
 	
-	private String nombre;
-	private String telefono;
-	//private String localidad;
+	private int regionId;
+	private String regionName;
+	
+	
+	
+	
+	
+	
 
+
+	
+	
 }
