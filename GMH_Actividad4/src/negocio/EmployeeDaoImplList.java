@@ -6,6 +6,7 @@ import java.util.List;
 
 import javabean.Department;
 import javabean.Employee;
+import javabean.Location;
 
 public class EmployeeDaoImplList implements IEmployeeDao{
 	
@@ -71,6 +72,61 @@ public class EmployeeDaoImplList implements IEmployeeDao{
 	public List<Employee> findAll() {
 		// TODO Auto-generated method stub
 		return lista;
+	}
+
+	/* METODOS IMPLEMENTADOS */
+		
+	@Override
+	public List<Employee> porDepartamento(int departmentId) {
+		List<Employee> aux = new ArrayList<Employee>();
+		for (Employee ele : lista) {
+			if(ele.getDepartment().getDepartmentId()==departmentId){
+				aux.add(ele);
+			} 
+			
+		}
+		if(aux.isEmpty())
+			System.out.println("No se encontraron trabajadores en ese departamento");
+		return aux;
+	}
+
+	@Override
+	public List<Employee> porTrabajo(String jobId) {
+		List<Employee> aux = new ArrayList<Employee>();
+		for (Employee ele : lista) {
+			if(ele.getJob().getJobId().equals(jobId)){
+				aux.add(ele);
+			} 
+			
+		}
+		if(aux.isEmpty())
+			System.out.println("No se encontraron trabajadores en ese departamento");
+		return aux;
+	}
+
+	@Override
+	public double calcularMasaSalarial() {
+		double acumulador=0.0;
+			for(Employee ele : lista)
+				acumulador+=ele.getSalary();
+		return acumulador;
+	}
+
+	@Override
+	public double masaSalarialPorDep(int departmentId) {
+		double acumulador=0.0;
+		for(Employee ele : lista)
+			if(ele.getDepartment().getDepartmentId()== departmentId) {
+			acumulador+=ele.getSalary();
+			}
+		return acumulador;
+		
+	}
+
+	@Override
+	public List<Employee> fueraSalario() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

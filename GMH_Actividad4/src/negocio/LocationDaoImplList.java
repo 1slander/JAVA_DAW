@@ -65,5 +65,49 @@ public class LocationDaoImplList implements ILocationDao {
 		// TODO Auto-generated method stub
 		return lista;
 	}
+	
+	/* METODOS IMPLEMENTADOS */
+
+	@Override
+	public List<Location> buscarPorCity(String city) {
+		List<Location> aux = new ArrayList<Location>();
+		for (Location ele : lista) {
+			if(ele.getCity().equals(city)){
+				aux.add(ele);
+			} 
+			
+		}
+		if(aux.isEmpty())
+			System.out.println("No se encontraron localizaciones con esa ciudad");
+		return aux;
+	}
+
+	@Override
+	public List<Location> buscarPorPostalCode(String postalCode) {
+		List<Location> aux = new ArrayList<Location>();
+		for (Location ele : lista) {
+			if(ele.getPostalCode().equals(postalCode)){
+				aux.add(ele);
+			} 
+			
+		}
+		if(aux.isEmpty())
+			System.out.println("No se encontraron localizaciones con ese codigo postal");
+		return aux;
+	}
+
+	@Override
+	public List<Location> buscarPorPais(String countryId) {
+		List<Location> aux = new ArrayList<Location>();
+		for (Location ele : lista) {
+			if(ele.getCountry().getCountryName().equals(countryId)){
+				aux.add(ele);
+			} 
+			
+		}
+		if(aux.isEmpty())
+			System.out.println("No se encontraron localizaciones con ese pais");
+		return aux;
+	}
 
 }
