@@ -23,6 +23,9 @@ public class LocationDaoImplList implements ILocationDao {
 		lista.add(new Location(1500, "pez 3", "28008", "Madrid", "Madrid", iCountryDao.findById("ES")));
 		lista.add(new Location(1600, "nuez 3", "28016", "Madrid", "Madrid", iCountryDao.findById("ES")));
 		lista.add(new Location(1700, "rosa 34", "19002", "Guadalajara", "Guadalajara", iCountryDao.findById("ES")));
+		lista.add(new Location(1800, "perro 13", "35004", "Las Palmas de Gran Canaria", "Las Palmas", iCountryDao.findById("ES")));
+		lista.add(new Location(1900, " 16 springland close", "IP4 5BZ", "Ipswich", "Suffolk", iCountryDao.findById("UK")));
+		lista.add(new Location(2000, "plata 34", "99202", "Buenos Aires", "Argentina", iCountryDao.findById("AR")));
 		
 	}
 

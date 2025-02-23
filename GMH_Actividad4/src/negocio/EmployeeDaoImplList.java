@@ -31,6 +31,12 @@ public class EmployeeDaoImplList implements IEmployeeDao{
 				iJobDao.findById("IT_PROG"), 35_000, 0.2,  iDepartmentDao.findById(30)));
 		lista.add(new  Employee(116, "carlos", "Colmenares", "carlos@fp.com", "678678678", LocalDate.of(1996, 7, 7), 
 				iJobDao.findById("AD_PRESS"), 135_000, 0.2,  iDepartmentDao.findById(20)));
+		lista.add(new Employee(117, "Manuel", "Glez", "manuel@fp.com", "677677678", LocalDate.of(1996, 7, 7),
+				iJobDao.findById("IT_PROG"), 85_000, 0.2,  iDepartmentDao.findById(30)));
+lista.add(new  Employee(118, "Lee", "Woo", "lee@fp.com", "698989898", LocalDate.of(1996, 7, 7), 
+iJobDao.findById("IT_PROG"), 15_000, 0.2,  iDepartmentDao.findById(30)));
+lista.add(new  Employee(119, "Mikel", "Carromero", "mikel@fp.com", "688888288", LocalDate.of(1996, 7, 7), 
+iJobDao.findById("AD_PRESS"), 11_000, 0.2,  iDepartmentDao.findById(20)));
 		 
 	}
 
@@ -125,8 +131,16 @@ public class EmployeeDaoImplList implements IEmployeeDao{
 
 	@Override
 	public List<Employee> fueraSalario() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Employee> aux = new ArrayList<Employee>();
+		for (Employee ele : lista) {
+			if(ele.getSalary() < ele.getJob().getMinSalary() || ele.getSalary() > ele.getJob().getMaxSalary()){
+				aux.add(ele);
+			} 
+			
+		}
+		if(aux.isEmpty())
+			System.out.println("No se encontraron trabajadores en ese fuera de salario");
+		return aux;
 	}
 
 }

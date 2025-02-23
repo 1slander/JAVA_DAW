@@ -21,7 +21,7 @@ public class CountryDaoImplList implements ICountryDao{
 		
 		lista.add(new Country("ES", "España", iRegionDao.findById(1)));
 		lista.add(new Country("FR", "Francia", iRegionDao.findById(1)));
-		lista.add(new Country("AL", "Alemania", iRegionDao.findById(1)));
+		lista.add(new Country("UK", "Reino Unido", iRegionDao.findById(1)));
 		lista.add(new Country("AR", "Argentina", iRegionDao.findById(3)));
 		lista.add(new Country("CO", "Colombia", iRegionDao.findById(3)));
 		 

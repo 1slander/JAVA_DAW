@@ -30,7 +30,7 @@ public class TestLocationImplDaoActividad {
 			
 			System.out.println(" BUSCAR POR COUNTRY");
 			
-			for (Location ele: iLocationDao.buscarPorPais("España")) {
+			for (Location ele: iLocationDao.buscarPorPais("Argentina")) {
 				System.out.println(ele);
 			}
 			
