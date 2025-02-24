@@ -27,6 +27,7 @@ public class TestEmployeeImplDaoActividad {
 		System.out.println("Calcular masa salarial por departamento");
 		
 		System.out.println(iEmployeeDao.masaSalarialPorDep(30));
+		System.out.println(iEmployeeDao.masaSalarialPorDep(20));
 		
 		System.out.println("Calcular salario fuera min y max");
 		

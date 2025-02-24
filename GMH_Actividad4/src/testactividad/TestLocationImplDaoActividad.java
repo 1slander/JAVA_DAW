@@ -16,12 +16,18 @@ public class TestLocationImplDaoActividad {
 			for (Location ele: iLocationDao.buscarPorCity("Madrid")) {
 				System.out.println(ele);
 			}
+			for (Location ele: iLocationDao.buscarPorCity("Londres")) {
+				System.out.println(ele);
+			}
 			
 			
 			
 			System.out.println(" BUSCAR POR POSTAL CODE");
 			
 			for (Location ele: iLocationDao.buscarPorPostalCode("19002")) {
+				System.out.println(ele);
+			}
+			for (Location ele: iLocationDao.buscarPorPostalCode("29002")) {
 				System.out.println(ele);
 			}
 			
@@ -31,6 +37,10 @@ public class TestLocationImplDaoActividad {
 			System.out.println(" BUSCAR POR COUNTRY");
 			
 			for (Location ele: iLocationDao.buscarPorPais("Argentina")) {
+				System.out.println(ele);
+			}
+			
+			for (Location ele: iLocationDao.buscarPorPais("España")) {
 				System.out.println(ele);
 			}
 			
