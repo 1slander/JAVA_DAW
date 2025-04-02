@@ -24,6 +24,7 @@ public class CountryDaoImpleList implements ICountryDao {
 		lista.add(new Country("GR", "Alemania", iRegionDao.findById(1)));
 		lista.add(new Country("US", "Estados Unidos", iRegionDao.findById(3)));
 		lista.add(new Country("MO", "Marruecos", iRegionDao.findById(5)));
+		
 	}
 
 	@Override

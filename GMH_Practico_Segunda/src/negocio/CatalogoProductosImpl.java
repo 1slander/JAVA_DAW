@@ -27,6 +27,8 @@ public class CatalogoProductosImpl implements ICatalogo{
 		Lista.add(new Producto(3, "Zapatillas", "Zapatillas deportivas de Mujer talla 37", "Adidas", "Blanco", 80.00,familia , proveedor));
 		Lista.add(new Producto(4, "Sudadera", "Sudadera con capucha de mujer", "Puma", "Gris", 55.00,familia , proveedor));
 		Lista.add(new Producto(5, "Chaqueta", "Chaqueta de cuero de mujer talla M", "Zara", "Negro", 120.00, familia , proveedor));
+		
+		Lista.clear
 
 	}
 
