@@ -6,7 +6,15 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/Applications/Eclipse.app/Contents/MacOS/mysql-connector-java-5.1.46.jar"/>
-	<classpathentry kind="lib" path="/Applications/Eclipse.app/Contents/MacOS/lombok.jar"/>
+	<classpathentry kind="lib" path="/Applications/Eclipse.app/Contents/MacOS/lombok.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Applications/Eclipse.app/Contents/MacOS/mysql-connector-java-5.1.46.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
